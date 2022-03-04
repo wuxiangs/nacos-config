@@ -1,0 +1,21 @@
+server:
+  port: ${port:8889}
+spring:
+  application:
+    name: service2
+
+#nacos配置中心配置
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        namespace: 961ff8f9-2b8d-4d52-9326-cad2e73d7322
+        group: TEST_GROUP
+      discovery:
+        server-addr: 127.0.0.1:8848,127.0.0.1:8849,127.0.0.1:8850
+        namespace: 961ff8f9-2b8d-4d52-9326-cad2e73d7322
+logging:
+  level:
+    root: info
+    org.springframework: info
